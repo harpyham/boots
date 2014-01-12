@@ -10,7 +10,11 @@ require.config({
               }
         } 
 });
-       
-require(['jquery','bootstrap'],function($,bootstrap){
+
+
+
+
+require(['jquery','bootstrap','boots'],function($,bootstrap,boots){
     console.log("load OK");
+    boots.init();
 });
