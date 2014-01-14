@@ -387,7 +387,6 @@ Header and header elements.
 .header .nav > li.dropdown > a {
   padding-left: 4px; 
   padding-right: 4px;
-  float:left;
 }
 
 .header .nav > li.dropdown > a:last-child {

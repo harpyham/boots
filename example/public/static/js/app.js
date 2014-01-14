@@ -1,12 +1,13 @@
 require.config({
         baseUrl: 'static/js',
         paths: {
+            "jquery-ui":"jquery/jquery-ui-1.10.3",
             "jquery": "jquery/jquery-1.10.2",
             "bootstrap": "bootstrap/bootstrap"
         },
         shim:{
              "bootstrap": {
-                deps: ["jquery"]
+                deps: ["jquery-ui","jquery"]
               }
         } 
 });

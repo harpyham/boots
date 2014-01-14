@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 2.3.1
+Version: 1.3
+Author: KeenThemes
+Website: http://www.keenthemes.com/preview/?theme=metronic
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469
+-->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
@@ -11,15 +18,13 @@
 	<meta content="ZHANG Fengyu" name="author" />
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="static/css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <!-- BOOTS
-	<link href="static/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+	<!-- BOOTS
 	<link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 	<link href="static/css/style-metro.css" rel="stylesheet" type="text/css"/>
 END BOOTS-->
 	<link href="static/css/general.css" rel="stylesheet" type="text/css"/>
-<!-- BOOTS
-	<link href="static/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-    END BOOTS-->
+    <link href="static/css/general-responsive.css" rel="stylesheet" type="text/css"/>
 	<link href="static/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
     <!-- BOOTS
     <link href="static/css/uniform.default.css" rel="stylesheet" type="text/css"/>
@@ -43,14 +48,14 @@ END BOOTS-->
 	<div class="header navbar navbar-inverse navbar-fixed-top">
 		<!-- BEGIN TOP NAVIGATION BAR -->
 		<div class="navbar-inner">
-			<div class="container">
+			<div class="container-fluid">
 				<!-- BEGIN LOGO -->
-				<a class="navbar-brand" href="index.html">
+				<a class="brand" href="index.html">
 				<img src="static/images/logo.png" alt="logo"/>
 				</a>
 				<!-- END LOGO -->
 				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-				<a href="javascript:;" class="btn btn-default collapsed" data-toggle="collapse" data-target=".nav-collapse">
+				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 				<img src="static/images/menu-toggler.png" alt="" />
 				</a>          
 				<!-- END RESPONSIVE MENU TOGGLER -->            
@@ -59,7 +64,7 @@ END BOOTS-->
 					<!-- BEGIN NOTIFICATION DROPDOWN -->   
 					<li class="dropdown" id="header_notification_bar">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="glyphicon glyphicon-warning-sign"></i>
+						<i class="icon-warning-sign"></i>
 						<span class="badge">6</span>
 						</a>
 						<ul class="dropdown-menu extended notification">
@@ -68,48 +73,48 @@ END BOOTS-->
 							</li>
 							<li>
 								<a href="#">
-								<span class="label label-success"><i class="glyphicon glyphicon-plus"></i></span>
+								<span class="label label-success"><i class="icon-plus"></i></span>
 								New user registered. 
 								<span class="time">Just now</span>
 								</a>
 							</li>
 							<li>
 								<a href="#">
-								<span class="label label-important"><i class="glyphicon glyphicon-bolt"></i></span>
+								<span class="label label-important"><i class="icon-bolt"></i></span>
 								Server #12 overloaded. 
 								<span class="time">15 mins</span>
 								</a>
 							</li>
 							<li>
 								<a href="#">
-								<span class="label label-warning"><i class="glyphicon glyphicon-bell"></i></span>
+								<span class="label label-warning"><i class="icon-bell"></i></span>
 								Server #2 not respoding.
 								<span class="time">22 mins</span>
 								</a>
 							</li>
 							<li>
 								<a href="#">
-								<span class="label label-info"><i class="glyphicon glyphicon-bullhorn"></i></span>
+								<span class="label label-info"><i class="icon-bullhorn"></i></span>
 								Application error.
 								<span class="time">40 mins</span>
 								</a>
 							</li>
 							<li>
 								<a href="#">
-								<span class="label label-important"><i class="glyphicon glyphicon-bolt"></i></span>
+								<span class="label label-important"><i class="icon-bolt"></i></span>
 								Database overloaded 68%. 
 								<span class="time">2 hrs</span>
 								</a>
 							</li>
 							<li>
 								<a href="#">
-								<span class="label label-important"><i class="glyphicon glyphicon-bolt"></i></span>
+								<span class="label label-important"><i class="icon-bolt"></i></span>
 								2 user IP blocked.
 								<span class="time">5 hrs</span>
 								</a>
 							</li>
 							<li class="external">
-								<a href="#">See all notifications <i class="glyphicon glyphicon-swapright"></i></a>
+								<a href="#">See all notifications <i class="m-icon-swapright"></i></a>
 							</li>
 						</ul>
 					</li>
@@ -117,7 +122,7 @@ END BOOTS-->
 					<!-- BEGIN INBOX DROPDOWN -->
 					<li class="dropdown" id="header_inbox_bar">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="glyphicon glyphicon-envelope"></i>
+						<i class="icon-envelope"></i>
 						<span class="badge">5</span>
 						</a>
 						<ul class="dropdown-menu extended inbox">
@@ -164,7 +169,7 @@ END BOOTS-->
 								</a>
 							</li>
 							<li class="external">
-								<a href="inbox.html">See all messages <i class="glyphicon glyphicon-swapright"></i></a>
+								<a href="inbox.html">See all messages <i class="m-icon-swapright"></i></a>
 							</li>
 						</ul>
 					</li>
@@ -172,7 +177,7 @@ END BOOTS-->
 					<!-- BEGIN TODO DROPDOWN -->
 					<li class="dropdown" id="header_task_bar">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="glyphicon glyphicon-tasks"></i>
+						<i class="icon-tasks"></i>
 						<span class="badge">5</span>
 						</a>
 						<ul class="dropdown-menu extended tasks">
@@ -246,7 +251,7 @@ END BOOTS-->
 								</a>
 							</li>
 							<li class="external">
-								<a href="#">See all tasks <i class="glyphicon glyphicon-swapright"></i></a>
+								<a href="#">See all tasks <i class="m-icon-swapright"></i></a>
 							</li>
 						</ul>
 					</li>
@@ -256,16 +261,16 @@ END BOOTS-->
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img alt="" src="static/images/avatar1_small.jpg" />
 						<span class="username">Bob Nilson</span>
-						<i class="glyphicon glyphicon-angle-down"></i>
+						<i class="icon-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="extra_profile.html"><i class="glyphicon glyphicon-user"></i> My Profile</a></li>
-							<li><a href="page_calendar.html"><i class="glyphicon glyphicon-calendar"></i> My Calendar</a></li>
-							<li><a href="inbox.html"><i class="glyphicon glyphicon-envelope"></i> My Inbox(3)</a></li>
-							<li><a href="#"><i class="glyphicon glyphicon-tasks"></i> My Tasks</a></li>
+							<li><a href="extra_profile.html"><i class="icon-user"></i> My Profile</a></li>
+							<li><a href="page_calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>
+							<li><a href="inbox.html"><i class="icon-envelope"></i> My Inbox(3)</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>
 							<li class="divider"></li>
-							<li><a href="extra_lock.html"><i class="glyphicon glyphicon-lock"></i> Lock Screen</a></li>
-							<li><a href="login.html"><i class="glyphicon glyphicon-key"></i> Log Out</a></li>
+							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
+							<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
 						</ul>
 					</li>
 					<!-- END USER LOGIN DROPDOWN -->
@@ -284,7 +289,7 @@ END BOOTS-->
 			<ul class="page-sidebar-menu">
 				<li>
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler hidden-sm"></div>
+					<div class="sidebar-toggler hidden-phone"></div>
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 				</li>
 				<li>
@@ -300,14 +305,14 @@ END BOOTS-->
 				</li>
 				<li class="start active ">
 					<a href="index.html">
-					<i class="glyphicon glyphicon-home"></i> 
+					<i class="icon-home"></i> 
 					<span class="title">Dashboard</span>
 					<span class="selected"></span>
 					</a>
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-cogs"></i> 
+					<i class="icon-cogs"></i> 
 					<span class="title">Layouts</span>
 					<span class="arrow "></span>
 					</a>
@@ -356,7 +361,7 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-bookmark-empty"></i> 
+					<i class="icon-bookmark-empty"></i> 
 					<span class="title">UI Features</span>
 					<span class="arrow "></span>
 					</a>
@@ -405,7 +410,7 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-table"></i> 
+					<i class="icon-table"></i> 
 					<span class="title">Form Stuff</span>
 					<span class="arrow "></span>
 					</a>
@@ -442,61 +447,61 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-briefcase"></i> 
+					<i class="icon-briefcase"></i> 
 					<span class="title">Pages</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li >
 							<a href="page_timeline.html">
-							<i class="glyphicon glyphicon-time"></i>
+							<i class="icon-time"></i>
 							Timeline</a>
 						</li>
 						<li >
 							<a href="page_coming_soon.html">
-							<i class="glyphicon glyphicon-cogs"></i>
+							<i class="icon-cogs"></i>
 							Coming Soon</a>
 						</li>
 						<li >
 							<a href="page_blog.html">
-							<i class="glyphicon glyphicon-comments"></i>
+							<i class="icon-comments"></i>
 							Blog</a>
 						</li>
 						<li >
 							<a href="page_blog_item.html">
-							<i class="glyphicon glyphicon-font"></i>
+							<i class="icon-font"></i>
 							Blog Post</a>
 						</li>
 						<li >
 							<a href="page_news.html">
-							<i class="glyphicon glyphicon-coffee"></i>
+							<i class="icon-coffee"></i>
 							News</a>
 						</li>
 						<li >
 							<a href="page_news_item.html">
-							<i class="glyphicon glyphicon-bell"></i>
+							<i class="icon-bell"></i>
 							News View</a>
 						</li>
 						<li >
 							<a href="page_about.html">
-							<i class="glyphicon glyphicon-group"></i>
+							<i class="icon-group"></i>
 							About Us</a>
 						</li>
 						<li >
 							<a href="page_contact.html">
-							<i class="glyphicon glyphicon-envelope-alt"></i>
+							<i class="icon-envelope-alt"></i>
 							Contact Us</a>
 						</li>
 						<li >
 							<a href="page_calendar.html">
-							<i class="glyphicon glyphicon-calendar"></i>
+							<i class="icon-calendar"></i>
 							Calendar</a>
 						</li>
 					</ul>
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-gift"></i> 
+					<i class="icon-gift"></i> 
 					<span class="title">Extra</span>
 					<span class="arrow "></span>
 					</a>
@@ -557,7 +562,7 @@ END BOOTS-->
 				</li>
 				<li>
 					<a class="active" href="javascript:;">
-					<i class="glyphicon glyphicon-sitemap"></i> 
+					<i class="icon-sitemap"></i> 
 					<span class="title">3 Level Menu</span>
 					<span class="arrow "></span>
 					</a>
@@ -593,50 +598,50 @@ END BOOTS-->
 				</li>
 				<li>
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-folder-open"></i> 
+					<i class="icon-folder-open"></i> 
 					<span class="title">4 Level Menu</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
 							<a href="javascript:;">
-							<i class="glyphicon glyphicon-cogs"></i> 
+							<i class="icon-cogs"></i> 
 							Item 1
 							<span class="arrow"></span>
 							</a>
 							<ul class="sub-menu">
 								<li>
 									<a href="javascript:;">
-									<i class="glyphicon glyphicon-user"></i>
+									<i class="icon-user"></i>
 									Sample Link 1
 									<span class="arrow"></span>
 									</a>
 									<ul class="sub-menu">
-										<li><a href="#"><i class="glyphicon glyphicon-remove"></i> Sample Link 1</a></li>
-										<li><a href="#"><i class="glyphicon glyphicon-pencil"></i> Sample Link 1</a></li>
-										<li><a href="#"><i class="glyphicon glyphicon-edit"></i> Sample Link 1</a></li>
+										<li><a href="#"><i class="icon-remove"></i> Sample Link 1</a></li>
+										<li><a href="#"><i class="icon-pencil"></i> Sample Link 1</a></li>
+										<li><a href="#"><i class="icon-edit"></i> Sample Link 1</a></li>
 									</ul>
 								</li>
-								<li><a href="#"><i class="glyphicon glyphicon-user"></i>  Sample Link 1</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-external-link"></i>  Sample Link 2</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-bell"></i>  Sample Link 3</a></li>
+								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
+								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 2</a></li>
+								<li><a href="#"><i class="icon-bell"></i>  Sample Link 3</a></li>
 							</ul>
 						</li>
 						<li>
 							<a href="javascript:;">
-							<i class="glyphicon glyphicon-globe"></i> 
+							<i class="icon-globe"></i> 
 							Item 2
 							<span class="arrow"></span>
 							</a>
 							<ul class="sub-menu">
-								<li><a href="#"><i class="glyphicon glyphicon-user"></i>  Sample Link 1</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-external-link"></i>  Sample Link 1</a></li>
-								<li><a href="#"><i class="glyphicon glyphicon-bell"></i>  Sample Link 1</a></li>
+								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
+								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 1</a></li>
+								<li><a href="#"><i class="icon-bell"></i>  Sample Link 1</a></li>
 							</ul>
 						</li>
 						<li>
 							<a href="#">
-							<i class="glyphicon glyphicon-folder-open"></i>
+							<i class="icon-folder-open"></i>
 							Item 3
 							</a>
 						</li>
@@ -644,7 +649,7 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-user"></i> 
+					<i class="icon-user"></i> 
 					<span class="title">Login Options</span>
 					<span class="arrow "></span>
 					</a>
@@ -661,7 +666,7 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-th"></i> 
+					<i class="icon-th"></i> 
 					<span class="title">Data Tables</span>
 					<span class="arrow "></span>
 					</a>
@@ -690,7 +695,7 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-file-text"></i> 
+					<i class="icon-file-text"></i> 
 					<span class="title">Portlets</span>
 					<span class="arrow "></span>
 					</a>
@@ -707,7 +712,7 @@ END BOOTS-->
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class="glyphicon glyphicon-map-marker"></i> 
+					<i class="icon-map-marker"></i> 
 					<span class="title">Maps</span>
 					<span class="arrow "></span>
 					</a>
@@ -724,7 +729,7 @@ END BOOTS-->
 				</li>
 				<li class="last ">
 					<a href="charts.html">
-					<i class="glyphicon glyphicon-bar-chart"></i> 
+					<i class="icon-bar-chart"></i> 
 					<span class="title">Visual Charts</span>
 					</a>
 				</li>
@@ -746,14 +751,14 @@ END BOOTS-->
 			</div>
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 			<!-- BEGIN PAGE CONTAINER-->
-			<div class="container">
+			<div class="container-fluid">
 				<!-- BEGIN PAGE HEADER-->
-				<div class="row">
-					<div class="col-md-12">
+				<div class="row-fluid">
+					<div class="span12">
 						<!-- BEGIN STYLE CUSTOMIZER -->
-						<div class="color-panel hidden-sm">
-							<div class="color-mode-icons glyphicon glyphicon-color"></div>
-							<div class="color-mode-icons glyphicon glyphicon-color-close"></div>
+						<div class="color-panel hidden-phone">
+							<div class="color-mode-icons icon-color"></div>
+							<div class="color-mode-icons icon-color-close"></div>
 							<div class="color-mode">
 								<p>THEME COLOR</p>
 								<ul class="inline">
@@ -801,16 +806,16 @@ END BOOTS-->
 						</h3>
 						<ul class="breadcrumb">
 							<li>
-								<i class="glyphicon glyphicon-home"></i>
+								<i class="icon-home"></i>
 								<a href="index.html">Home</a> 
-								<i class="glyphicon glyphicon-angle-right"></i>
+								<i class="icon-angle-right"></i>
 							</li>
 							<li><a href="#">Dashboard</a></li>
 							<li class="pull-right no-text-shadow">
 								<div id="dashboard-report-range" class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet="" data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
-									<i class="glyphicon glyphicon-calendar"></i>
+									<i class="icon-calendar"></i>
 									<span></span>
-									<i class="glyphicon glyphicon-angle-down"></i>
+									<i class="icon-angle-down"></i>
 								</div>
 							</li>
 						</ul>
@@ -818,1187 +823,7 @@ END BOOTS-->
 					</div>
 				</div>
 				<!-- END PAGE HEADER-->
-				<div id="dashboard">
-					<!-- BEGIN DASHBOARD STATS -->
-					<div class="row">
-						<div class="col-md-3 responsive" data-tablet="span6" data-desktop="span3">
-							<div class="dashboard-stat blue">
-								<div class="visual">
-									<i class="glyphicon glyphicon-comments"></i>
-								</div>
-								<div class="details">
-									<div class="number">
-										1349
-									</div>
-									<div class="desc">                           
-										New Feedbacks
-									</div>
-								</div>
-								<a class="more" href="#">
-								View more <i class="glyphicon glyphicon-swapright glyphicon glyphicon-white"></i>
-								</a>                 
-							</div>
-						</div>
-						<div class="col-md-3 responsive" data-tablet="span6" data-desktop="span3">
-							<div class="dashboard-stat green">
-								<div class="visual">
-									<i class="glyphicon glyphicon-shopping-cart"></i>
-								</div>
-								<div class="details">
-									<div class="number">549</div>
-									<div class="desc">New Orders</div>
-								</div>
-								<a class="more" href="#">
-								View more <i class="glyphicon glyphicon-swapright glyphicon glyphicon-white"></i>
-								</a>                 
-							</div>
-						</div>
-						<div class="col-md-3 responsive" data-tablet="span6  fix-offset" data-desktop="span3">
-							<div class="dashboard-stat purple">
-								<div class="visual">
-									<i class="glyphicon glyphicon-globe"></i>
-								</div>
-								<div class="details">
-									<div class="number">+89%</div>
-									<div class="desc">Brand Popularity</div>
-								</div>
-								<a class="more" href="#">
-								View more <i class="glyphicon glyphicon-swapright glyphicon glyphicon-white"></i>
-								</a>                 
-							</div>
-						</div>
-						<div class="col-md-3 responsive" data-tablet="span6" data-desktop="span3">
-							<div class="dashboard-stat yellow">
-								<div class="visual">
-									<i class="glyphicon glyphicon-bar-chart"></i>
-								</div>
-								<div class="details">
-									<div class="number">12,5M$</div>
-									<div class="desc">Total Profit</div>
-								</div>
-								<a class="more" href="#">
-								View more <i class="glyphicon glyphicon-swapright glyphicon glyphicon-white"></i>
-								</a>                 
-							</div>
-						</div>
-					</div>
-					<!-- END DASHBOARD STATS -->
-					<div class="clearfix"></div>
-					<div class="row">
-						<div class="col-md-6">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet solid bordered light-grey">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-bar-chart"></i>Site Visits</div>
-									<div class="tools">
-										<div class="btn btn-default pull-right" data-toggle="buttons-radio">
-											<a href="" class="btn btn-default mini">Users</a>
-											<a href="" class="btn btn-default mini active">Feedbacks</a>
-										</div>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div id="site_statistics_loading">
-										<img src="static/images/loading.gif" alt="loading" />
-									</div>
-									<div id="site_statistics_content" class="hide">
-										<div id="site_statistics" class="chart"></div>
-									</div>
-								</div>
-							</div>
-							<!-- END PORTLET-->
-						</div>
-						<div class="col-md-6">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet solid light-grey bordered">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-bullhorn"></i>Activities</div>
-									<div class="tools">
-										<div class="btn btn-default pull-right" data-toggle="buttons-radio">
-											<a href="" class="btn btn-default blue mini active">Users</a>
-											<a href="" class="btn btn-default blue mini">Orders</a>
-										</div>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div id="site_activities_loading">
-										<img src="static/images/loading.gif" alt="loading" />
-									</div>
-									<div id="site_activities_content" class="hide">
-										<div id="site_activities" style="height:100px;"></div>
-									</div>
-								</div>
-							</div>
-							<!-- END PORTLET-->
-							<!-- BEGIN PORTLET-->
-							<div class="portlet solid bordered light-grey">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-signal"></i>Server Load</div>
-									<div class="tools">
-										<div class="btn btn-default pull-right" data-toggle="buttons-radio">
-											<a href="" class="btn btn-default red mini active">
-											<span class="hidden-sm">Database</span>
-											<span class="visible-sm">DB</span></a>
-											<a href="" class="btn btn-default red mini">Web</a>
-										</div>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div id="load_statistics_loading">
-										<img src="static/images/loading.gif" alt="loading" />
-									</div>
-									<div id="load_statistics_content" class="hide">
-										<div id="load_statistics" style="height:108px;"></div>
-									</div>
-								</div>
-							</div>
-							<!-- END PORTLET-->
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="portlet box purple">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-calendar"></i>General Stats</div>
-									<div class="actions">
-										<a href="javascript:;" class="btn yellow easy-pie-chart-reload"><i class="glyphicon glyphicon-repeat"></i> Reload</a>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="easy-pie-chart">
-												<div class="number transactions"  data-percent="55"><span>+55</span>%</div>
-												<a class="title" href="#">Transactions <i class="glyphicon glyphicon-swapright"></i></a>
-											</div>
-										</div>
-										<div class="margin-bottom-10 visible-sm"></div>
-										<div class="col-md-4">
-											<div class="easy-pie-chart">
-												<div class="number visits"  data-percent="85"><span>+85</span>%</div>
-												<a class="title" href="#">New Visits <i class="glyphicon glyphicon-swapright"></i></a>
-											</div>
-										</div>
-										<div class="margin-bottom-10 visible-sm"></div>
-										<div class="col-md-4">
-											<div class="easy-pie-chart">
-												<div class="number bounce"  data-percent="46"><span>-46</span>%</div>
-												<a class="title" href="#">Bounce <i class="glyphicon glyphicon-swapright"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="portlet box blue">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-calendar"></i>Server Stats</div>
-									<div class="tools">
-										<a href="" class="collapse"></a>
-										<a href="#portlet-config" data-toggle="modal" class="config"></a>
-										<a href="" class="reload"></a>
-										<a href="" class="remove"></a>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="sparkline-chart">
-												<div class="number" id="sparkline_bar"></div>
-												<a class="title" href="#">Network <i class="glyphicon glyphicon-swapright"></i></a>
-											</div>
-										</div>
-										<div class="margin-bottom-10 visible-sm"></div>
-										<div class="col-md-4">
-											<div class="sparkline-chart">
-												<div class="number" id="sparkline_bar2"></div>
-												<a class="title" href="#">CPU Load <i class="glyphicon glyphicon-swapright"></i></a>
-											</div>
-										</div>
-										<div class="margin-bottom-10 visible-sm"></div>
-										<div class="col-md-4">
-											<div class="sparkline-chart">
-												<div class="number" id="sparkline_line"></div>
-												<a class="title" href="#">Load Rate <i class="glyphicon glyphicon-swapright"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="row">
-						<div class="col-md-6">
-							<!-- BEGIN REGIONAL STATS PORTLET-->
-							<div class="portlet">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-globe"></i>Regional Stats</div>
-									<div class="tools">
-										<a href="" class="collapse"></a>
-										<a href="#portlet-config" data-toggle="modal" class="config"></a>
-										<a href="" class="reload"></a>
-										<a href="" class="remove"></a>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div id="region_statistics_loading">
-										<img src="static/images/loading.gif" alt="loading" />
-									</div>
-									<div id="region_statistics_content" class="hide">
-										<div class="btn btn-default">
-											<div class="btn btn-default " data-toggle="buttons-radio">
-												<a href="" class="btn btn-default mini active">Users</a>
-												<a href="" class="btn btn-default mini">Orders</a> 
-											</div>
-											<div class="btn btn-default pull-right">
-												<a href="" class="btn btn-default mini dropdown-toggle" data-toggle="dropdown">
-												Select Region <span class="glyphicon glyphicon-angle-down"></span>
-												</a>
-												<ul class="dropdown-menu pull-right">
-													<li><a href="javascript:;" id="regional_stat_world">World</a></li>
-													<li><a href="javascript:;" id="regional_stat_usa">USA</a></li>
-													<li><a href="javascript:;" id="regional_stat_europe">Europe</a></li>
-													<li><a href="javascript:;" id="regional_stat_russia">Russia</a></li>
-													<li><a href="javascript:;" id="regional_stat_germany">Germany</a></li>
-												</ul>
-											</div>
-										</div>
-										<div id="vmap_world" class="vmaps chart hide"></div>
-										<div id="vmap_usa" class="vmaps chart hide"></div>
-										<div id="vmap_europe" class="vmaps chart hide"></div>
-										<div id="vmap_russia" class="vmaps chart hide"></div>
-										<div id="vmap_germany" class="vmaps chart hide"></div>
-									</div>
-								</div>
-							</div>
-							<!-- END REGIONAL STATS PORTLET-->
-						</div>
-						<div class="col-md-6">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet paddingless">
-								<div class="portlet-title line">
-									<div class="caption"><i class="glyphicon glyphicon-bell"></i>Feeds</div>
-									<div class="tools">
-										<a href="" class="collapse"></a>
-										<a href="#portlet-config" data-toggle="modal" class="config"></a>
-										<a href="" class="reload"></a>
-										<a href="" class="remove"></a>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<!--BEGIN TABS-->
-									<div class="tabbable tabbable-custom">
-										<ul class="nav nav-tabs">
-											<li class="active"><a href="#tab_1_1" data-toggle="tab">System</a></li>
-											<li><a href="#tab_1_2" data-toggle="tab">Activities</a></li>
-											<li><a href="#tab_1_3" data-toggle="tab">Recent Users</a></li>
-										</ul>
-										<div class="tab-content">
-											<div class="tab-pane active" id="tab_1_1">
-												<div class="scroller" data-height="290px" data-always-visible="1" data-rail-visible="0">
-													<ul class="feeds">
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-success">                        
-																			<i class="glyphicon glyphicon-bell"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			You have 4 pending tasks.
-																			<span class="label label-important label-mini">
-																			Take action 
-																			<i class="glyphicon glyphicon-share-alt"></i>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	Just now
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New version v1.4 just lunched!   
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		20 mins
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-important">                      
-																			<i class="glyphicon glyphicon-bolt"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			Database server #12 overloaded. Please fix the issue.                      
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	24 mins
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-info">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	30 mins
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-success">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	40 mins
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-warning">                        
-																			<i class="glyphicon glyphicon-plus"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New user registered.                
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	1.5 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-success">                        
-																			<i class="glyphicon glyphicon-bell-alt"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			Web server hardware needs to be upgraded. 
-																			<span class="label label-inverse label-mini">Overdue</span>             
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	2 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label">                       
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	3 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-warning">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	5 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-info">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	18 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label">                       
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	21 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-info">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	22 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label">                       
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	21 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-info">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	22 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label">                       
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	21 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-info">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	22 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label">                       
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	21 hours
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-info">                        
-																			<i class="glyphicon glyphicon-bullhorn"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			New order received. Please take care of it.                 
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	22 hours
-																</div>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="tab-pane" id="tab_1_2">
-												<div class="scroller" data-height="290px" data-always-visible="1" data-rail-visible1="1">
-													<ul class="feeds">
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New order received 
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		10 mins
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<div class="col1">
-																<div class="cont">
-																	<div class="cont-col1">
-																		<div class="label label-important">                      
-																			<i class="glyphicon glyphicon-bolt"></i>
-																		</div>
-																	</div>
-																	<div class="cont-col2">
-																		<div class="desc">
-																			Order #24DOP4 has been rejected.    
-																			<span class="label label-important label-mini">Take action <i class="glyphicon glyphicon-share-alt"></i></span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col2">
-																<div class="date">
-																	24 mins
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li>
-															<a href="#">
-																<div class="col1">
-																	<div class="cont">
-																		<div class="cont-col1">
-																			<div class="label label-success">                        
-																				<i class="glyphicon glyphicon-bell"></i>
-																			</div>
-																		</div>
-																		<div class="cont-col2">
-																			<div class="desc">
-																				New user registered
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col2">
-																	<div class="date">
-																		Just now
-																	</div>
-																</div>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="tab-pane" id="tab_1_3">
-												<div class="scroller" data-height="290px" data-always-visible="1" data-rail-visible1="1">
-													<div class="row">
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Robert Nilson</a> 
-																	<span class="label label-success">Approved</span>
-																</div>
-																<div>29 Jan 2013 10:45AM</div>
-															</div>
-														</div>
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Lisa Miller</a> 
-																	<span class="label label-info">Pending</span>
-																</div>
-																<div>19 Jan 2013 10:45AM</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Eric Kim</a> 
-																	<span class="label label-info">Pending</span>
-																</div>
-																<div>19 Jan 2013 12:45PM</div>
-															</div>
-														</div>
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Lisa Miller</a> 
-																	<span class="label label-important">In progress</span>
-																</div>
-																<div>19 Jan 2013 11:55PM</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Eric Kim</a> 
-																	<span class="label label-info">Pending</span>
-																</div>
-																<div>19 Jan 2013 12:45PM</div>
-															</div>
-														</div>
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Lisa Miller</a> 
-																	<span class="label label-important">In progress</span>
-																</div>
-																<div>19 Jan 2013 11:55PM</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div><a href="#">Eric Kim</a> <span class="label label-info">Pending</span>
-																</div>
-																<div>19 Jan 2013 12:45PM</div>
-															</div>
-														</div>
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Lisa Miller</a> 
-																	<span class="label label-important">In progress</span>
-																</div>
-																<div>19 Jan 2013 11:55PM</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div><a href="#">Eric Kim</a> <span class="label label-info">Pending</span>
-																</div>
-																<div>19 Jan 2013 12:45PM</div>
-															</div>
-														</div>
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Lisa Miller</a> 
-																	<span class="label label-important">In progress</span>
-																</div>
-																<div>19 Jan 2013 11:55PM</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Eric Kim</a> 
-																	<span class="label label-info">Pending</span>
-																</div>
-																<div>19 Jan 2013 12:45PM</div>
-															</div>
-														</div>
-														<div class="col-md-6 user-info">
-															<img alt="" src="static/images/avatar.png" />
-															<div class="details">
-																<div>
-																	<a href="#">Lisa Miller</a> 
-																	<span class="label label-important">In progress</span>
-																</div>
-																<div>19 Jan 2013 11:55PM</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--END TABS-->
-								</div>
-							</div>
-							<!-- END PORTLET-->
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="row">
-						<div class="col-md-6">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet box blue calendar">
-								<div class="portlet-title">
-									<div class="caption"><i class="glyphicon glyphicon-calendar"></i>Calendar</div>
-								</div>
-								<div class="portlet-body light-grey">
-									<div id="calendar">
-									</div>
-								</div>
-							</div>
-							<!-- END PORTLET-->
-						</div>
-						<div class="col-md-6">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet">
-								<div class="portlet-title line">
-									<div class="caption"><i class="glyphicon glyphicon-comments"></i>Chats</div>
-									<div class="tools">
-										<a href="" class="collapse"></a>
-										<a href="#portlet-config" data-toggle="modal" class="config"></a>
-										<a href="" class="reload"></a>
-										<a href="" class="remove"></a>
-									</div>
-								</div>
-								<div class="portlet-body" id="chats">
-									<div class="scroller" data-height="435px" data-always-visible="1" data-rail-visible1="1">
-										<ul class="chats">
-											<li class="in">
-												<img class="avatar" alt="" src="static/images/avatar1.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Bob Nilson</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="out">
-												<img class="avatar" alt="" src="static/images/avatar2.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Lisa Wong</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="in">
-												<img class="avatar" alt="" src="static/images/avatar1.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Bob Nilson</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="out">
-												<img class="avatar" alt="" src="static/images/avatar3.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Richard Doe</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="in">
-												<img class="avatar" alt="" src="static/images/avatar3.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Richard Doe</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="out">
-												<img class="avatar" alt="" src="static/images/avatar1.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Bob Nilson</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="in">
-												<img class="avatar" alt="" src="static/images/avatar3.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Richard Doe</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-													sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-													</span>
-												</div>
-											</li>
-											<li class="out">
-												<img class="avatar" alt="" src="static/images/avatar1.jpg" />
-												<div class="message">
-													<span class="arrow"></span>
-													<a href="#" class="name">Bob Nilson</a>
-													<span class="datetime">at Jul 25, 2012 11:09</span>
-													<span class="body">
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. sed diam nonummy nibh euismod tincidunt ut laoreet.
-													</span>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="chat-form">
-										<div class="input-cont">   
-											<input class="m-wrap" type="text" placeholder="Type a message here..." />
-										</div>
-										<div class="btn btn-default"> 
-											<span class="arrow"></span>
-											<a href="" class="btn blue icn-only"><i class="glyphicon glyphicon-ok glyphicon glyphicon-white"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- END PORTLET-->
-						</div>
-					</div>
-				</div>
+                    </div>
 			</div>
 			<!-- END PAGE CONTAINER-->    
 		</div>
@@ -2012,7 +837,7 @@ END BOOTS-->
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">
-			<i class="glyphicon glyphicon-angle-up"></i>
+			<i class="icon-angle-up"></i>
 			</span>
 		</div>
 	</div>
@@ -2087,5 +912,6 @@ END BOOTS-->
     </script>
     END BOOTS-->
 	<!-- END JAVASCRIPTS -->
+</body>
 <!-- END BODY -->
 </html>
