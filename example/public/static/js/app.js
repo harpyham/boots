@@ -3,7 +3,10 @@ require.config({
         paths: {
             "jquery-ui":"jquery/jquery-ui-1.10.3",
             "jquery": "jquery/jquery-1.10.2",
-            "bootstrap": "bootstrap/bootstrap"
+            "bootstrap": "bootstrap/bootstrap",
+            "underscore": "underscore/underscore",
+            "boots.menu": "boots/menu",
+            "less":"less/less-1.6.1.js"
         },
         shim:{
              "bootstrap": {
@@ -17,5 +20,5 @@ require.config({
 
 require(['jquery','bootstrap','boots'],function($,bootstrap,boots){
     console.log("load OK");
-    boots.init();
+   // example.init();
 });

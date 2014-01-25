@@ -4,29 +4,11 @@ Core script to handle the entire layout and base functions
 define(['jquery'], function ($) {
     "use strict";
     // IE mode
-    var boots = {
-        isRTL : false,
-        isIE8 : false,
-        isIE9 : false,
-        isIE10 : false,
+    var isRTL = false,
+        isIE8 = false,
+        isIE9 = false,
+        isIE10 = false,
 
-        
-        handleInit : function () {
-
-            if ($('body').css('direction') === 'rtl') {
-                isRTL = true;
-            }
-    
-            isIE8 = !!navigator.userAgent.match(/MSIE 8.0/);
-            isIE9 = !!navigator.userAgent.match(/MSIE 9.0/);
-            isIE10 = !!navigator.userAgent.match(/MSIE 10/);
-            
-            if (isIE10) {
-                $('html').addClass('ie10'); // detect IE10 version
-            }
-        },
-        
-        
         sidebarWidth = 225,
         sidebarCollapsedWidth = 35,
 
@@ -43,7 +25,20 @@ define(['jquery'], function ($) {
             'yellow': '#ffb848'
         },
 
-        
+        handleInit = function () {
+
+            if ($('body').css('direction') === 'rtl') {
+                isRTL = true;
+            }
+    
+            isIE8 = !!navigator.userAgent.match(/MSIE 8.0/);
+            isIE9 = !!navigator.userAgent.match(/MSIE 9.0/);
+            isIE10 = !!navigator.userAgent.match(/MSIE 10/);
+            
+            if (isIE10) {
+                $('html').addClass('ie10'); // detect IE10 version
+            }
+        },
 
         handleDesktopTabletContents = function () {
         // loops all page elements with "responsive" class and applies classes for tablet mode
