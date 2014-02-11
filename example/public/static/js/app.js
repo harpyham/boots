@@ -3,8 +3,9 @@ require.config({
         paths: {
             "underscore":"underscore/underscore",
             "backbone":"backbone/backbone",
-            "jquery-ui":"jquery/jquery-ui-1.10.3",
+            "jquery-ui":"jquery-ui/jquery-ui-1.10.3.custom",
             "jquery": "jquery/jquery-1.10.2",
+            "jquery.cookie": "jquery/jquery.cookie.min",
             "bootstrap": "bootstrap/bootstrap",
             "underscore": "underscore/underscore",
             "boots.menu": "boots/menu",

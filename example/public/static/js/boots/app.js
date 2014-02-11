@@ -1,7 +1,7 @@
 /**
 Core script to handle the entire layout and base functions
 **/
-define(['jquery','boots','boots.events'], function ($,boots,events) {
+define(['jquery','boots','boots.events'], function (jQuery,boots,events) {
     
     "use strict";
     
@@ -9,58 +9,58 @@ define(['jquery','boots','boots.events'], function ($,boots,events) {
         name:'boots',
         init:function(){
         },
-        tabletWidth:1280,
+        getViewPort : function () {
+            var e = window, a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            return {
+                width: e[a + 'Width'],
+                height: e[a + 'Height']
+            }
+        },
         // wrapper function to  block element(indicate loading)
         blockUI: function (el, centerY) {
-            var el = $(el); 
+            var el = jQuery(el);
+            if (el.height() <= 400) {
+                centerY = true;
+            }
             el.block({
-                    message: '<img src="./assets/img/ajax-loading.gif" align="">',
-                    centerY: centerY != undefined ? centerY : true,
-                    css: {
-                        top: '10%',
-                        border: 'none',
-                        padding: '2px',
-                        backgroundColor: 'none'
-                    },
-                    overlayCSS: {
-                        backgroundColor: '#000',
-                        opacity: 0.05,
-                        cursor: 'wait'
-                    }
-                });
+                message: '<img src="/static/images/ajax-loading.gif" align="">',
+                centerY: centerY != undefined ? centerY : true,
+                css: {
+                    top: '10%',
+                    border: 'none',
+                    padding: '2px',
+                    backgroundColor: 'none'
+                },
+                overlayCSS: {
+                    backgroundColor: '#000',
+                    opacity: 0.05,
+                    cursor: 'wait'
+                }
+            });
         },
 
         // wrapper function to  un-block element(finish loading)
         unblockUI: function (el) {
-            $(el).unblock({
-                    onUnblock: function () {
-                        $(el).removeAttr("style");
-                    }
-                });
+             jQuery(el).unblock({
+                onUnblock: function () {
+                    jQuery(el).css('position', '');
+                    jQuery(el).css('zoom', '');
+                }
+            });
         },
 
-        
-        // useful function to make equal height for contacts stand side by side
-        setEqualHeight: function (els) {
-            var tallestEl = 0;
-            els = $(els);
-            els.each(function () {
-                    var currentHeight = $(this).height();
-                    if (currentHeight > tallestEl) {
-                        tallestColumn = currentHeight;
-                    }
-                });
-            els.height(tallestEl);
+       scrollTo: function (el, offeset) {
+            pos = (el && el.size() > 0) ? el.offset().top : 0;
+            jQuery('html,body').animate({
+                scrollTop: pos + (offeset ? offeset : 0)
+            }, 'slow');
         },
 
-        // wrapper function to scroll to an element
-        scrollTo: function (el, offeset) {
-            pos = el ? el.offset().top : 0;
-            $('html,body').animate({
-                    scrollTop: pos + (offeset ? offeset : 0)
-                }, 'slow');
-        },
-
+        // function to scroll to the top
         scrollTop: function () {
             this.scrollTo();
         },
@@ -96,41 +96,31 @@ define(['jquery','boots','boots.events'], function ($,boots,events) {
                 });
             }   
         },
-        handleDesktopTabletContents : function () {
-        // loops all page elements with "responsive" class and applies classes for tablet mode
-        // For metornic  1280px or less set as tablet mode to display the content properly
-            if ($(window).width() <= this.tabletWidth || $('body').hasClass('page-boxed')) {
-                $(".responsive").each(function () {
-                    var forTablet = $(this).attr('data-tablet'),
-                        forDesktop = $(this).attr('data-desktop');
-                    if (forTablet) {
-                        $(this).removeClass(forDesktop);
-                        $(this).addClass(forTablet);
-                    }
-                });
+       
+        toggleFullScreen:function() {
+          if (!document.fullscreenElement &&    // alternative standard method
+              !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+              document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+              document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
             }
-
-            // loops all page elements with "responsive" class and applied classes for desktop mode
-            // For metornic  higher 1280px set as desktop mode to display the content properly
-            if ($(window).width() > this.tabletWidth && $('body').hasClass('page-boxed') === false) {
-                $(".responsive").each(function () {
-                    var forTablet = $(this).attr('data-tablet'),
-                        forDesktop = $(this).attr('data-desktop');
-                    if (forTablet) {
-                        $(this).removeClass(forTablet);
-                        $(this).addClass(forDesktop);
-                    }
-                });
+          } else {
+            if (document.cancelFullScreen) {
+              document.cancelFullScreen();
+            } else if (document.mozCancelFullScreen) {
+              document.mozCancelFullScreen();
+            } else if (document.webkitCancelFullScreen) {
+              document.webkitCancelFullScreen();
             }
+          }
         },
-        onResponsive:function(){
-            console.log('handleResponsive');
-            this.handleDesktopTabletContents();
-        },
+       
         base_init: function() {
             boots.init();
-            this.on('resize',this.onResponsive,this);
-         
+                   
             this.handleResponsiveOnResize();
             this.trigger('resize');
         }

@@ -11,6 +11,11 @@ define(['jquery'], function ($) {
         isIE8 : false,
         isIE9 : false,
         isIE10 : false,
+        isTouchDevice: false,
+        isIOS :false,
+        isIPhone:false,
+        isIPad:false,
+        isIPod:false,
         //main function to initiate template pages
         init: function () {
 
@@ -62,10 +67,23 @@ define(['jquery'], function ($) {
             } catch (e) {
                 this.isTouchDevice = false;
             }
+            var deviceAgent = navigator.userAgent.toLowerCase();
+            if (deviceAgent.match(/iphone/)) {
+                this.isIPhone = true;
+            }
+            if (deviceAgent.match(/ipod/)) {
+                this.isIPod = true;
+            }
+            if (deviceAgent.match(/ipad/)) {
+                this.isIPad = true;
+            }
+            this.isIOS = this.isIPad ||this.isIPhone||this.isIPod;
+            
         }
 
         
 
     };
+    boots.init();
     return boots;
 });
