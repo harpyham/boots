@@ -27,25 +27,10 @@ define(['jquery'], function ($) {
         },
         
         
-        sidebarWidth = 225,
-        sidebarCollapsedWidth = 35,
 
-        responsiveHandlers = [],
+        responsiveHandlers : [],
 
-    // theme layout color set
-        layoutColorCodes = {
-            'blue': '#4b8df8',
-            'red': '#e02222',
-            'green': '#35aa47',
-            'purple': '#852b99',
-            'grey': '#555555',
-            'light-grey': '#fafafa',
-            'yellow': '#ffb848'
-        },
-
-        
-
-        handleDesktopTabletContents = function () {
+        handleDesktopTabletContents : function () {
         // loops all page elements with "responsive" class and applies classes for tablet mode
         // For metornic  1280px or less set as tablet mode to display the content properly
             if ($(window).width() <= 1280 || $('body').hasClass('page-boxed')) {
@@ -73,22 +58,16 @@ define(['jquery'], function ($) {
             }
         },
 
-        handleSidebarState = function () {
-        // remove sidebar toggler if window width smaller than 900(for table and phone mode)
-            if ($(window).width() < 980) {
-                $('body').removeClass("page-sidebar-closed");
-            }
-        }
 
-        var runResponsiveHandlers = function () {
+        runResponsiveHandlers : function () {
             // reinitialize other subscribed elements
             for (var i in responsiveHandlers) {
                 var each = responsiveHandlers[i];
                 each.call();
             }
-        }
+        },
     
-        var handleResponsive = function () {
+        handleResponsive : function () {
             handleTooltips();
             handleSidebarState();
             handleDesktopTabletContents();
@@ -96,7 +75,7 @@ define(['jquery'], function ($) {
             handleChoosenSelect();
             handleFixedSidebar();
             runResponsiveHandlers();
-        }
+        },
     
         var handleResponsiveOnInit = function () {
             handleSidebarState();

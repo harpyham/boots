@@ -6,7 +6,8 @@ require.config({
             "bootstrap": "bootstrap/bootstrap",
             "underscore": "underscore/underscore",
             "boots.menu": "boots/menu",
-            "less":"less/less-1.6.1.js"
+            "less":"less/less-1.6.1.js",
+            "boots.app":"boots/app"
         },
         shim:{
              "bootstrap": {
@@ -16,9 +17,10 @@ require.config({
 });
 
 
-
+/*
 
 require(['jquery','bootstrap','boots'],function($,bootstrap,boots){
     console.log("load OK");
    // example.init();
 });
+*/
