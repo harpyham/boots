@@ -121,7 +121,7 @@ define(['jquery'], function ($) {
                         clearTimeout(resize);
                     }   
                     resize = setTimeout(function() {
-                        console.log('resize');
+                        console.de('resize');
                         handleResponsive();    
                     }, 50); // wait 50ms until window resize finishes.
                 });
